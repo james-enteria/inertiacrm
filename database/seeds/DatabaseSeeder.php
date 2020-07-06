@@ -4,6 +4,7 @@ use App\User;
 use App\Account;
 use App\Contact;
 use App\Organization;
+use
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -30,5 +31,7 @@ class DatabaseSeeder extends Seeder
             ->each(function ($contact) use ($organizations) {
                 $contact->update(['organization_id' => $organizations->random()->id]);
             });
+
+        
     }
 }

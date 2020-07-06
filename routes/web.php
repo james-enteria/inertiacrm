@@ -52,6 +52,8 @@ Route::put('contacts/{contact}/restore')->name('contacts.restore')->uses('Contac
 // Reports
 Route::get('reports')->name('reports')->uses('ReportsController')->middleware('auth');
 
+Route::get('sales')->name('sales')->uses('SaleController@index')->middleware('auth');
+
 // 500 error
 Route::get('500', function () {
     // Force debug mode for this endpoint in the demo environment

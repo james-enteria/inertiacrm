@@ -13,6 +13,11 @@ class Contact extends Model
         return $this->belongsTo(Organization::class);
     }
 
+    public function sale()
+    {
+        return $this->belongsTo(Sale::class);
+    }
+
     public function getNameAttribute()
     {
         return $this->first_name.' '.$this->last_name;
